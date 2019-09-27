@@ -84,7 +84,6 @@ sum(data==21231)
 [1] 127
 
 # Variant 2 from the local folder
-# from local folder
 doc <- read_xml(x = "D:/R/R2/LAB1/getdata_data_restaurants.xml", useInternalNodes = TRUE)
 zip <- xml_text(xml_find_all(doc, "//zipcode"))
 sum(zip==21231)
