@@ -1,4 +1,5 @@
 # Task 0
+```{r}
 # Підготовка даних
 # Зчитування даних і заміна "?" на "NA"
 consumption <- read.table(file = "./household_power_consumption.txt", header = TRUE,
@@ -13,12 +14,13 @@ TwoDays$FullDate <- paste(TwoDays$Date, TwoDays$Time)
 # Зміна з тексту на формат дати
 TwoDays$FullDate <- strptime(TwoDays$FullDate, "%d/%m/%Y %H:%M:%S")
 TwoDays$Date <- as.Date(TwoDays$Date, "%d/%m/%Y")
-
+```
 
 # Task 2
-
+```{r}
 # Побудова лінійної діаграми
 png(filename="./plot2.png", width=480, height=480)
 plot(TwoDays$FullDate, TwoDays$Global_active_power, type = "l", xlab = "",  
      ylab = "Global Active Power (kilowatts)")
 dev.off()
+```
